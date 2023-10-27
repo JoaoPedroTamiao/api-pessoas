@@ -10,3 +10,5 @@ pessoa.andandoDistancia(100);
 
 pessoa.comer();
 pessoa.comendoComida(`Banana`);
+
+pessoa.cadastroPessoa(pessoa);

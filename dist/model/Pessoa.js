@@ -122,16 +122,22 @@ class Pessoa {
     andar() {
         console.log(`${this.nome} esta andando`);
     }
-    andandoDistancia(_frase) {
+    andandoDistancia(_Quilometros) {
         setTimeout(() => {
-            console.log(`${this.nome} anda: ${_frase} Quilometros`);
+            console.log(`${this.nome} anda: ${_Quilometros} Quilometros`);
         }, 3000);
     }
     comer() {
         console.log(`${this.nome} esta comendo`);
     }
-    comendoComida(_frase) {
-        console.log(`${this.nome} esta comendo: Uma${_frase}`);
+    comendoComida(_prato) {
+        console.log(`${this.nome} esta comendo: Uma${_prato}`);
+    }
+    /**
+     *  CRUD
+     */
+    cadastroPessoa(baninha) {
+        console.log(`${baninha.nome} cadastrado com sucesso`);
     }
 }
 exports.Pessoa = Pessoa;

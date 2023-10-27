@@ -166,8 +166,9 @@ export class Pessoa {
      *  CRUD
      */
 
-    
 
+    cadastroPessoa(pessoa: Pessoa){
+        console.log(`${pessoa.nome} cadastrado com sucesso`);
 
-
+    }
 }

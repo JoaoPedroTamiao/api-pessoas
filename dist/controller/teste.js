@@ -5,7 +5,8 @@ let pessoa = new Pessoa_1.Pessoa(`João`, `111111111`, new Date(2000 / 10 / 20),
 pessoa.falar();
 pessoa.falarFrase(`Vai Curintia!!!`);
 pessoa.andar();
-pessoa.andandoDistancia(`230`);
+pessoa.andandoDistancia(100);
 pessoa.comer();
 pessoa.comendoComida(`Banana`);
+pessoa.cadastroPessoa(pessoa);
 //# sourceMappingURL=teste.js.map
