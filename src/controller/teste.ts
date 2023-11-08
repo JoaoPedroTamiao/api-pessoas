@@ -6,9 +6,7 @@ pessoa.falar();
 pessoa.falarFrase(`Vai Curintia!!!`);
 
 pessoa.andar();
-pessoa.andandoDistancia(100);
+pessoa.andarQuilometros(100);
 
 pessoa.comer();
-pessoa.comendoComida(`Banana`);
-
-pessoa.cadastroPessoa(pessoa);
+pessoa.comerPrato(`Banana`);

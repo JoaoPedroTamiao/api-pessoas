@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Pessoa = void 0;
 class Pessoa {
-    //atributos da classe
+    // atributos da classe
     nome;
     cpf;
     data_nascimento;
@@ -21,73 +21,54 @@ class Pessoa {
         this.peso = _peso;
     }
     // métodos GETTERS and SETTERS
+    /**
+     * Retorna o nome da pessoa
+     *
+     * @returns nome : nome da pessoa
+     */
     getNome() {
         return this.nome;
     }
     /**
-     * Atribui nome a pessoa
-     * @param _nome
-     * Nome da pessoa
+     * Atribui o parâmetro ao atributo nome
+     *
+     * @param _nome : nome da pessoa
      */
     setNome(_nome) {
         this.nome = _nome;
     }
     /**
-     * Retorna o cpf da pessoa
-     * @returns cpf: cpf da pessoa
+     * Retorna o CPF da pessoa
+     *
+     * @returns cpf : cpf da pessoa
      */
     getCPF() {
         return this.cpf;
     }
-    /**
-     * Atribui o cpf da pessoa
-     * @param _cpf
-     * cpf da pessoa
-     */
     setCPF(_cpf) {
         this.cpf = _cpf;
     }
-    getData_Nascimento() {
+    getDataNascimento() {
         return this.data_nascimento;
     }
-    /**
-     * Atribui a data de nascimento da pessoa
-     * @param _data_nascimento
-     * Data de nascimento da pessoa
-     */
-    setData_Nascimento(_data_nascimento) {
+    setDataNascimento(_data_nascimento) {
         this.data_nascimento = _data_nascimento;
     }
     getTelefone() {
         return this.telefone;
     }
-    /**
-     * Atribui o telefone da pessoa
-     * @param _telefone
-     * Telefone da pessoa
-     */
     setTelefone(_telefone) {
         this.telefone = _telefone;
     }
     getEndereco() {
         return this.endereco;
     }
-    /**
-     * Atribui o endereço da pessoa
-     * @param _endereco
-     * endereco da pessoa
-     */
     setEndereco(_endereco) {
         this.endereco = _endereco;
     }
     getAltura() {
         return this.altura;
     }
-    /**
-     * Atribui altura pra pessoa
-     * @param _altura
-     * altura da pessoa
-     */
     setAltura(_altura) {
         this.altura = _altura;
     }
@@ -96,48 +77,44 @@ class Pessoa {
     }
     /**
      * Atribui peso a pessoa
+     *
      * @param _peso
-     * peso da pessoa
+     *  peso da pessoa
      */
     setPeso(_peso) {
         this.peso = _peso;
     }
-    //implementar os métodos
-    falar() {
-        console.log(`${this.nome} esta falando`);
-    }
-    falarFrase(_frase) {
-        //Logica de negócio
-        console.log(`${this.nome} fala: ${_frase}`);
-    }
     mostraPessoa() {
         console.log(`Nome: ${this.nome}
-                    CPF: ${this.cpf}
-                    Data: ${this.data_nascimento}
-                    Telefone: ${this.telefone}
-                    Endereço: ${this.endereco}
-                    Altura: ${this.altura}
-                    Peso: ${this.peso}`);
+        CPF: ${this.cpf}
+        Data de nascimento: ${this.data_nascimento.getUTCDate()}/${this.data_nascimento.getMonth()}/${this.data_nascimento.getFullYear()}
+        Telefone: ${this.telefone}
+        Endereço: ${this.endereco}
+        Altura: ${this.altura}
+        Peso: ${this.peso}`);
+    }
+    // implementar os métodos
+    falar() {
+        // lógica de negócio
+        console.log(`${this.nome} está falando...`);
+    }
+    falarFrase(_frase) {
+        //lógica de negócio
+        console.log(`${this.nome} fala: ${_frase}`);
     }
     andar() {
-        console.log(`${this.nome} esta andando`);
+        console.log(`${this.nome} está andando...`);
     }
-    andandoDistancia(_Quilometros) {
+    andarQuilometros(quilometros) {
         setTimeout(() => {
-            console.log(`${this.nome} anda: ${_Quilometros} Quilometros`);
+            console.log(`${this.nome} caminhou ${quilometros} quilometros`);
         }, 3000);
     }
     comer() {
-        console.log(`${this.nome} esta comendo`);
+        console.log(`${this.nome} está comendo...`);
     }
-    comendoComida(_prato) {
-        console.log(`${this.nome} esta comendo: Uma${_prato}`);
-    }
-    /**
-     *  CRUD
-     */
-    cadastroPessoa(baninha) {
-        console.log(`${baninha.nome} cadastrado com sucesso`);
+    comerPrato(prato) {
+        console.log(`${this.nome} está comendo ${prato}`);
     }
 }
 exports.Pessoa = Pessoa;
